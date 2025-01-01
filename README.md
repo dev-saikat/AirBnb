@@ -59,8 +59,15 @@ Highlight the standout features of your project:
 4. **Push to the branch (`git push origin feature-branch`)**
 5. **Create a new Pull Request**
 
-## 📄 License
-This project is licensed under the MIT License.
-
 ## 📧 Contact
-For any questions or feedback, please contact [your email address].
+For any questions or feedback, please contact avisaikat7029@gmail.com
+
+### 🛠️ Tools & Technologies
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node-dot-js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
