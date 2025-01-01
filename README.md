@@ -30,7 +30,7 @@ This project is part of the Web Development course in the BCA program. It aims t
     ```bash
     npm install
     ```
-
+ 
 ## Usage
 
 1. **Start the development server:**
