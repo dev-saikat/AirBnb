@@ -4,21 +4,20 @@
 This project is part of the Web Development course in the BCA program. It aims to create a comprehensive web application that demonstrates the skills and knowledge acquired throughout the course.
 
 ## Features
-- User authentication and authorization
-- Responsive design
-- CRUD operations
-- RESTful API integration
-- Database management
+- **User Authentication and Authorization**: Secure login and registration with role-based access.
+- **Responsive Design**: Mobile-first design that adapts to different screen sizes.
+- **CRUD Operations**: Ability to create, read, update, and delete data.
+- **RESTful API Integration**: Integration with RESTful APIs for data management.
+- **Database Management**: Store and manage data using MongoDB.
 
 ## Technologies Used
-- HTML5, CSS3, JavaScript
-- React.js
-- Node.js
-- Express.js
-- MongoDB
+- **Frontend**: HTML5, CSS3, JavaScript, React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
 
 ## Installation
-## Installation
+
+### Steps to Install:
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/yourusername/major_project.git
@@ -33,6 +32,7 @@ This project is part of the Web Development course in the BCA program. It aims t
     ```
 
 ## Usage
+
 1. **Start the development server:**
     ```bash
     npm start
@@ -40,6 +40,7 @@ This project is part of the Web Development course in the BCA program. It aims t
 2. **Open your browser and navigate to `http://localhost:3000`**
 
 ## Contributing
+
 1. **Fork the repository**
 2. **Create a new branch (`git checkout -b feature-branch`)**
 3. **Commit your changes (`git commit -am 'Add new feature'`)**
