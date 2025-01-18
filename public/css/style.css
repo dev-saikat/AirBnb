@@ -21,6 +21,10 @@ body{
     color: #222222 !important;
 }
 
+.nav-link:hover{
+    text-decoration: underline !important;
+}
+
 /* Footer */
 .f-info-links a{
     text-decoration: none ;
