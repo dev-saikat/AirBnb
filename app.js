@@ -7,9 +7,13 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const listings = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
+const userRouth = require("./routes/user.js");
 const Database = "Airbnb";
 const session = require("express-session");
 const flash = require("connect-flash");
+const passport = require("passport");
+const localStrategy = require("passport-local");
+const User = require("./models/user.js");
 
 // Database Connect
 main().then(() => {
@@ -40,6 +44,12 @@ const sessionOptions = {
 
 app.use(session(sessionOptions));
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 // // Basic routh
 // app.get("/", wrapAsync(async(req, res) => {
@@ -55,6 +65,7 @@ app.use((req, res, next) => {
 
 app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
+app.use("/", userRouth);
 
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page Not Found", 404));
