@@ -3,13 +3,16 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: linear-gradient(#ffaebb93,#b4f8c995,#a0e7e589,#ffaebbb2) !important;
 }
 
 /* Navbar */
 .navbar {
-    background-color: white !important;
+    background: linear-gradient(#FFAEBC,#B4F8C8) !important;
+    /* background-color: white !important; */
     height: 5rem;
     padding: 10px 0;
+    
 }
 
 .fa-compass-drafting{
@@ -49,7 +52,8 @@ body{
     display: flex;
     justify-content: center;
     /* padding: 1rem 0; */
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
+    background: linear-gradient(#FFAEBC,#B4F8C8,#A0E7E5) !important;
     flex-wrap: wrap;
     align-items: space-evenly;
 }
@@ -95,3 +99,7 @@ body{
 /* .review-card{
     border: 2px solid black !important;
 } */
+
+.listing-card{
+    background: transparent !important;
+}

@@ -37,8 +37,8 @@ router.get("/login", (req, res) => {
 
 router.post("/login",saveRedirectUrl, passport.authenticate("local", { failureRedirect: '/login', failureFlash: true }), async (req, res) => {
     req.flash("success", "Welcome back to AirBnb You are Successfully Loged in");
-
-    res.redirect(res.locals.redirectUrl);
+    let redirectUrl = res.locals.redirectUrl || "/listings";
+    res.redirect(redirectUrl);
     
 });
 
