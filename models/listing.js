@@ -1,6 +1,7 @@
 const mongo = require("mongoose");
 const { listingSchema } = require("../schema");
 const Review = require("./review");
+const { ref } = require("joi");
 const Schema = mongo.Schema;
 
 const linstingSchema = new Schema({
@@ -11,8 +12,8 @@ const linstingSchema = new Schema({
     description: String,
     image: {
         type: String,
-        default:"https://images.unsplash.com/photo-1734375119887-460f4b97dfaa?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        set: (v) => v === "" ? "https://images.unsplash.com/photo-1734375119887-460f4b97dfaa?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" : v,
+        default:"https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+        set: (v) => v === "" ? "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" : v,
     },
     price: Number,
     location: String,
@@ -22,7 +23,11 @@ const linstingSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: "Review",
         }
-    ]
+    ],
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref:"User",
+    },
 });
 
 linstingSchema.post("findOneAndDelete", async (listing)=> {
