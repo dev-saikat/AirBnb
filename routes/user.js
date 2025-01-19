@@ -20,7 +20,7 @@ router.post("/signup", wrapAsync(async (req, res) => {
             if (err) {
                 return next(err);
             }
-            req.flash("success", "User Was Registered");
+            req.flash("success", "Welcome to Airbnb");
             res.redirect("/listings");
         })
     } catch (e) {
