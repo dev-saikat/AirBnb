@@ -11,19 +11,21 @@ const ExpressError = require("./utils/ExpressError.js");
 const listings = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
 const userRouth = require("./routes/user.js");
-const Database = "Airbnb";
 const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 const localStrategy = require("passport-local");
 const User = require("./models/user.js");
+const MongoStore = require("connect-mongo");
+
+let dbUrl = process.env.ATLASDB_URL;
 
 // Database Connect
 main().then(() => {
     console.log("Database Conected");
 }).catch(err => console.log(err));
 async function main() {
-    await mongo.connect(`mongodb://127.0.0.1:27017/${Database}`,);
+    await mongo.connect(dbUrl);
 };
 
 app.set("view engine", "ejs");
@@ -33,8 +35,23 @@ app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
 
+
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    crypto: {
+        secret: process.env.SECRET,
+    },
+    touchAfter: 24 * 3600,
+    
+});
+
+store.on("error", () => {
+    console.log("Error in MONGO SESSION STORE", err);
+})
+
 const sessionOptions = {
-    secret: "mysecretkey",
+    store,
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -43,6 +60,7 @@ const sessionOptions = {
         httpOnly: true,
     }
 }
+
 
 
 app.use(session(sessionOptions));
