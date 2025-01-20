@@ -8,8 +8,8 @@ body{
 
 /* Navbar */
 .navbar {
-    background: linear-gradient(#FFAEBC,#B4F8C8) !important;
-    /* background-color: white !important; */
+    /* background: linear-gradient(#FFAEBC,#B4F8C8) !important; */
+    background-color: white !important;
     height: 5rem;
     padding: 10px 0;
     
@@ -103,3 +103,21 @@ body{
 .listing-card{
     background: transparent !important;
 }
+
+/* .Create_accout{
+    background: linear-gradient(#FFAEBC,#B4F8C8,#A0E7E5) !important;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}; */
+.Create_accouts{
+    text-decoration: none !important;
+    background: linear-gradient(#FFAEBC,#B4F8C8,#A0E7E5) !important;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    color: #222222 !important;
+};
+.Create_accout:hover{
+    border: #007bff 2px solid;
+};
