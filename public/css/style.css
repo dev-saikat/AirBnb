@@ -3,7 +3,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(#ffaebb93,#b4f8c995,#a0e7e589,#ffaebbb2) !important;
+    /* background: linear-gradient(#ffaebb93,#b4f8c995,#a0e7e589,#ffaebbb2) !important; */
 }
 
 /* Navbar */
