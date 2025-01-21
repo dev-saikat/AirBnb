@@ -52,8 +52,8 @@ body{
     display: flex;
     justify-content: center;
     /* padding: 1rem 0; */
-    /* background-color: #f8f9fa; */
-    background: linear-gradient(#FFAEBC,#B4F8C8,#A0E7E5) !important;
+    background-color: #f8f9fa;
+    /* background: linear-gradient(#FFAEBC,#B4F8C8,#A0E7E5) !important; */
     flex-wrap: wrap;
     align-items: space-evenly;
 }
